@@ -40,13 +40,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\KaardiManguProject.50wug0zdhz.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"50wug0zdhz"},{"Name":"integrity","Value":"sha256-hX01UUNO/z1D0r/PYLn5N6ecwcSip8uOrdpjKcahc1M="},{"Name":"label","Value":"_content/KaardiManguProject/KaardiManguProject.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1136"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022hX01UUNO/z1D0r/PYLn5N6ecwcSip8uOrdpjKcahc1M=\u0022"},{"Name":"Last-Modified","Value":"Fri, 20 Mar 2026 08:17:30 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1136"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022hX01UUNO/z1D0r/PYLn5N6ecwcSip8uOrdpjKcahc1M=\u0022"},{"Name":"Last-Modified","Value":"Fri, 20 Mar 2026 08:57:54 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/KaardiManguProject/KaardiManguProject.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\KaardiManguProject.50wug0zdhz.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hX01UUNO/z1D0r/PYLn5N6ecwcSip8uOrdpjKcahc1M="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1136"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022hX01UUNO/z1D0r/PYLn5N6ecwcSip8uOrdpjKcahc1M=\u0022"},{"Name":"Last-Modified","Value":"Fri, 20 Mar 2026 08:17:30 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1136"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022hX01UUNO/z1D0r/PYLn5N6ecwcSip8uOrdpjKcahc1M=\u0022"},{"Name":"Last-Modified","Value":"Fri, 20 Mar 2026 08:57:54 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/KaardiManguProject/lib/bootstrap/dist/css/bootstrap-grid.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap-grid.css'))</AssetFile>
