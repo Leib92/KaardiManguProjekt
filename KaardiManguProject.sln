@@ -5,6 +5,12 @@ VisualStudioVersion = 17.13.35913.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaardiManguProject", "KaardiManguProject.csproj", "{B003652B-1EEA-4E15-9199-FF12B71EEBFE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaardiManguProjekt.Core", "..\KaardiManguProjekt.Core\KaardiManguProjekt.Core.csproj", "{EFD40AA6-BF1D-4BF4-B23E-B2772CBD3784}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaardiManguProjekt.ApplicationServices", "..\KaardiManguProjekt.ApplicationServices\KaardiManguProjekt.ApplicationServices.csproj", "{062435C5-E398-4132-A5DA-C3AF59FC19E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaardiManguProjekt.Data", "..\KaardiManguProjekt.Data\KaardiManguProjekt.Data.csproj", "{4D7CB34E-6FAD-4142-BCD5-0C2204D5B629}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{B003652B-1EEA-4E15-9199-FF12B71EEBFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B003652B-1EEA-4E15-9199-FF12B71EEBFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B003652B-1EEA-4E15-9199-FF12B71EEBFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFD40AA6-BF1D-4BF4-B23E-B2772CBD3784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD40AA6-BF1D-4BF4-B23E-B2772CBD3784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD40AA6-BF1D-4BF4-B23E-B2772CBD3784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD40AA6-BF1D-4BF4-B23E-B2772CBD3784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{062435C5-E398-4132-A5DA-C3AF59FC19E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{062435C5-E398-4132-A5DA-C3AF59FC19E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{062435C5-E398-4132-A5DA-C3AF59FC19E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{062435C5-E398-4132-A5DA-C3AF59FC19E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D7CB34E-6FAD-4142-BCD5-0C2204D5B629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D7CB34E-6FAD-4142-BCD5-0C2204D5B629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D7CB34E-6FAD-4142-BCD5-0C2204D5B629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D7CB34E-6FAD-4142-BCD5-0C2204D5B629}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
