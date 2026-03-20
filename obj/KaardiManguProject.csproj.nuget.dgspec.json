@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\opilane\\Source\\Repos\\KaardiManguProject\\KaardiManguProject.csproj": {}
+    "C:\\Users\\opilane\\source\\repos\\KaardiManguProjekt\\KaardiManguProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\opilane\\Source\\Repos\\KaardiManguProject\\KaardiManguProject.csproj": {
+    "C:\\Users\\opilane\\source\\repos\\KaardiManguProjekt\\KaardiManguProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\opilane\\Source\\Repos\\KaardiManguProject\\KaardiManguProject.csproj",
+        "projectUniqueName": "C:\\Users\\opilane\\source\\repos\\KaardiManguProjekt\\KaardiManguProject.csproj",
         "projectName": "KaardiManguProject",
-        "projectPath": "C:\\Users\\opilane\\Source\\Repos\\KaardiManguProject\\KaardiManguProject.csproj",
+        "projectPath": "C:\\Users\\opilane\\source\\repos\\KaardiManguProjekt\\KaardiManguProject.csproj",
         "packagesPath": "C:\\Users\\opilane\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\opilane\\Source\\Repos\\KaardiManguProject\\obj\\",
+        "outputPath": "C:\\Users\\opilane\\Source\\Repos\\KaardiManguProjekt\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
