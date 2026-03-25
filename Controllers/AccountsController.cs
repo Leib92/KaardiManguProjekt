@@ -1,12 +1,275 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using KaardiManguProject.Core.Domain;
+using KaardiManguProject.Core.Dto;
+using KaardiManguProject.Core.ServiceInterface;
+using KaardiManguProject.Data;
+using KaardiManguProject.Models.Accounts;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 
 namespace KaardiManguProject.Controllers
 {
     public class AccountsController : Controller
     {
-        public IActionResult Index()
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly KaardiManguProjectTARpe24Context _context;
+        private readonly IEmailsServices _emailsServices;  //HOMEWORK LOCATION ???
+
+        public AccountsController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, KaardiManguProjectTARpe24Context context, IEmailsServices emailsServices)
+        {
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _context = context;
+            _emailsServices = emailsServices;
+        }
+        [HttpGet]
+        public async Task<IActionResult> AddPassword()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            var userHasPassword = await _userManager.HasPasswordAsync(user);
+            if (userHasPassword)
+            {
+                RedirectToAction("ChangePassword");
+            }
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> AddPassword(AddPasswordViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.GetUserAsync(User);
+                var result = await _userManager.AddPasswordAsync(user, model.NewPassword);
+                if (!result.Succeeded)
+                {
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError(string.Empty, error.Description);
+                    }
+                    return View();
+                }
+                await _signInManager.RefreshSignInAsync(user);
+                return View("AddPasswordConfirmation");
+            }
+            return View(model);
+        }
+        [HttpPost]
+
+        [HttpGet]
+        public IActionResult ChangePassword()
         {
             return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.GetUserAsync(User);
+                if (user == null)
+                {
+                    return RedirectToAction("Login");
+                }
+                var result = await _userManager.ChangePasswordAsync(user, model.CurrentPassword, model.NewPassword);
+                if (!result.Succeeded)
+                {
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError(string.Empty, error.Description);
+                    }
+                    return View();
+                }
+                await _signInManager.RefreshSignInAsync(user);
+                return View("ChangePasswordConfirmation");
+            }
+            return View(model);
+        }
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                if (user != null && await _userManager.IsEmailConfirmedAsync(user))
+                {
+                    var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+                    var passwordResetLink = Url.Action("ResetPassword", "Accounts", new { email = model.Email, Token = token }, Request.Scheme);
+                    return View("ForgotPasswordConfirmation");
+                }
+            }
+            return View(model);
+        }
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<IActionResult> ResetPassword()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            if (token == null || user.Email == null)
+            {
+                ModelState.AddModelError("", "Invalid password reset token.");
+            }
+            var model = new ResetPasswordViewModel
+            {
+                Token = token,
+                Email = user.Email
+            };
+            return View(model);
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                if (user != null)
+                {
+                    var result = await _userManager.ResetPasswordAsync(user, model.Token, model.Password);
+                    if (result.Succeeded)
+                    {
+                        if (await _userManager.IsLockedOutAsync(user))
+                        {
+                            await _userManager.SetLockoutEndDateAsync(user, DateTimeOffset.UtcNow);
+                        }
+                        await _signInManager.SignOutAsync();
+                        await _userManager.DeleteAsync(user);
+                        return RedirectToAction("ResetPasswordConfirmation", "Accounts");
+                    }
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
+                    }
+                    return RedirectToAction("ResetPasswordConfirmation", "Accounts");
+                }
+                await _userManager.DeleteAsync(user);
+                return RedirectToAction("ResetPasswordConfirmation", "Accounts");
+            }
+            return RedirectToAction("ResetPasswordConfirmation", "Accounts");
+        }
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult ResetPasswordConfirmation()
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult AccountCreated()
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> Register(RegisterViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = new ApplicationUser()
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    ProfileType = model.ProfileType,
+                    AvatarName = model.DisplayName,
+                    AvatarImageID = Guid.NewGuid().ToString(),
+                };
+                var result = await _userManager.CreateAsync(user, model.Password);
+                if (result.Succeeded)
+                {
+                    var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                    var confirmationLink = Url.Action("ConfirmEmail", "Accounts", new { userID = user.Id, token = token }, Request.Scheme);
+                    var dto = new EmailDTO()
+                        {
+                            SendToThisAddress = model.Email,
+                            EmailSubject = "Email Confirmation",
+                            EmailContent = "Please click on this Link to confirm your account - " + confirmationLink
+                    };
+                    _emailsServices.SendEmail(dto);
+                    return RedirectToAction("Index", "Home");
+                }
+                return RedirectToAction("Index", "Home");
+            }
+            return BadRequest();
+        }
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<IActionResult> ConfirmEmail(string userId, string token)
+        {
+            if (userId == null || token == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            var result = await _userManager.ConfirmEmailAsync(user, token);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
+            return BadRequest();
+        }                        
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<IActionResult> Login(string? returnURL)
+        {
+            LoginViewModel vm = new()
+            {
+                ReturnUrl = returnURL,
+            };
+            return View(vm);
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> Login(LoginViewModel model, string? returnURL)
+        {
+            if (ModelState.IsValid) 
+            {
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                if (user != null && !user.EmailConfirmed && (await _userManager.CheckPasswordAsync(user,model.Password)))
+                {
+                    ModelState.AddModelError("", "Sinu email ei ole kinnitatud, palun vaata spämmi kausta");
+                    return View(model);
+                }
+                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, true);
+                if (result.Succeeded) 
+                {
+                    if (!string.IsNullOrEmpty(returnURL) && Url.IsLocalUrl(returnURL))
+                    { 
+                        return Redirect(returnURL);
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
+                }
+                if (result.IsLockedOut) 
+                {
+                    return View("AccountLocked");
+                }
+                ModelState.AddModelError("", "Sisselogimine ebaõnnestus, Kontakteeru admin.");
+            }
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
         }
     }
 }
