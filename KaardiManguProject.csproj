@@ -1,9 +1,28 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="KaardiManguProject.ApplicationServices\KaardiManguProject.ApplicationServices.csproj" />
+    <None Include="KaardiManguProject.Core\KaardiManguProject.Core.csproj" />
+    <None Include="KaardiManguProject.Data\KaardiManguProject.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="KaardiManguProject.ApplicationServices\bin\Release\net8.0\" />
+    <Folder Include="KaardiManguProject.Core\bin\Release\net8.0\" />
+    <Folder Include="KaardiManguProject.Data\bin\Release\net8.0\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.14.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.20" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.61.3" />
+  </ItemGroup>
 
 </Project>
