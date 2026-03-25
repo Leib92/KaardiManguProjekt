@@ -67,3 +67,4 @@ C:\Users\opilane\source\repos\KaardiManguProjekt\obj\Debug\net8.0\refint\KaardiM
 C:\Users\opilane\source\repos\KaardiManguProjekt\obj\Debug\net8.0\KaardiManguProject.pdb
 C:\Users\opilane\source\repos\KaardiManguProjekt\obj\Debug\net8.0\KaardiManguProject.genruntimeconfig.cache
 C:\Users\opilane\source\repos\KaardiManguProjekt\obj\Debug\net8.0\ref\KaardiManguProject.dll
+C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\scopedcss\Views\Home\Index.cshtml.rz.scp.css
