@@ -68,9 +68,6 @@ C:\Users\opilane\source\repos\KaardiManguProjekt\obj\Debug\net8.0\KaardiManguPro
 C:\Users\opilane\source\repos\KaardiManguProjekt\obj\Debug\net8.0\KaardiManguProject.genruntimeconfig.cache
 C:\Users\opilane\source\repos\KaardiManguProjekt\obj\Debug\net8.0\ref\KaardiManguProject.dll
 C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\KaardiManguProject.csproj.AssemblyReference.cache
-C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\Filminurk.ApplicationServices\bin\Debug\net8.0\Filminurk.ApplicationServices.deps.json
-C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\Filminurk.Core\bin\Debug\net8.0\Filminurk.Core.deps.json
-C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\Filminurk.Data\bin\Debug\net8.0\Filminurk.Data.deps.json
 C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\MailKit.dll
 C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
@@ -93,3 +90,6 @@ C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\MimeKit.dll
 C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\KaardiMa.803D6C76.Up2Date
+C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\KaardiManguProject.ApplicationServices\bin\Debug\net8.0\Filminurk.ApplicationServices.deps.json
+C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\KaardiManguProject.Core\bin\Debug\net8.0\Filminurk.Core.deps.json
+C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\KaardiManguProject.Data\bin\Debug\net8.0\Filminurk.Data.deps.json
