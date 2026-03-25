@@ -8,6 +8,7 @@ namespace KaardiManguProject
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            // ADD DBCONTEXT HERE!!!!
 
             var app = builder.Build();
 
