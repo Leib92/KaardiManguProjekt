@@ -1,3 +1,10 @@
+using KaardiManguProject.ApplicationServices.Services;
+using KaardiManguProject.Core.Domain;
+using KaardiManguProject.Core.ServiceInterface;
+using KaardiManguProject.Data;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 namespace KaardiManguProject
 {
     public class Program
@@ -7,8 +14,26 @@ namespace KaardiManguProject
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddRazorPages();
+            builder.Services.AddSignalR();
             builder.Services.AddControllersWithViews();
-            // ADD DBCONTEXT HERE!!!!
+            builder.Services.AddScoped<IMovieServices, MovieServices>();
+            builder.Services.AddScoped<IFilesServices, FileServices>();
+            builder.Services.AddScoped<IActorsServices, ActorsServices>();
+            builder.Services.AddScoped<IUserCommentsServices, UserCommentsServices>();
+            builder.Services.AddScoped<IFavoriteListsServices, FavoriteListsServices>();
+            builder.Services.AddScoped<IEmailsServices, EmailsServices>();
+            builder.Services.AddScoped<IAccountsServices, AccountsServices>();
+            builder.Services.AddDbContext<KaardiManguProjectTARpe24Context>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            {
+                options.SignIn.RequireConfirmedAccount = true;
+                options.Password.RequiredLength = 8;
+                options.Tokens.EmailConfirmationTokenProvider = "CustomEmailConfirmation";
+                options.Lockout.MaxFailedAccessAttempts = 3;
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+            }).AddEntityFrameworkStores<KaardiManguProjectTARpe24Context>().AddDefaultTokenProviders().AddTokenProvider<DataProtectorTokenProvider<ApplicationUser>>("CustomEmailConfirmation");
 
             var app = builder.Build();
 
@@ -30,7 +55,8 @@ namespace KaardiManguProject
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
-
+            app.MapRazorPages();
+            //app.MapHub<ChatHub>("/chatHub");
             app.Run();
         }
     }

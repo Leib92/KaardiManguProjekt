@@ -7,15 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="KaardiManguProject.ApplicationServices\KaardiManguProject.ApplicationServices.csproj" />
-    <None Include="KaardiManguProject.Core\KaardiManguProject.Core.csproj" />
-    <None Include="KaardiManguProject.Data\KaardiManguProject.Data.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="KaardiManguProject.ApplicationServices\bin\Release\net8.0\" />
-    <Folder Include="KaardiManguProject.Core\bin\Release\net8.0\" />
-    <Folder Include="KaardiManguProject.Data\bin\Release\net8.0\" />
+    <Compile Remove="KaardiManguProject.ApplicationServices\bin\**" />
+    <Compile Remove="KaardiManguProject.Core\bin\**" />
+    <Compile Remove="KaardiManguProject.Data\bin\**" />
+    <Content Remove="KaardiManguProject.ApplicationServices\bin\**" />
+    <Content Remove="KaardiManguProject.Core\bin\**" />
+    <Content Remove="KaardiManguProject.Data\bin\**" />
+    <EmbeddedResource Remove="KaardiManguProject.ApplicationServices\bin\**" />
+    <EmbeddedResource Remove="KaardiManguProject.Core\bin\**" />
+    <EmbeddedResource Remove="KaardiManguProject.Data\bin\**" />
+    <None Remove="KaardiManguProject.ApplicationServices\bin\**" />
+    <None Remove="KaardiManguProject.Core\bin\**" />
+    <None Remove="KaardiManguProject.Data\bin\**" />
   </ItemGroup>
 
   <ItemGroup>
