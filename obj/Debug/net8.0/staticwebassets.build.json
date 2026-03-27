@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZPJwqnbIdcfRhV05k2V/1Kk3TY1+nhN64yNL2dsi6Fw=",
+  "Hash": "ShcLprxPFEbTADiE3k5+huPhyOxS5AG1Pde1BVPRBM4=",
   "Source": "KaardiManguProject",
   "BasePath": "_content/KaardiManguProject",
   "Mode": "Default",
@@ -99,6 +99,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\opilane\\Source\\Repos\\KaardiManguProjekt\\wwwroot\\js\\chat.js",
+      "SourceId": "KaardiManguProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\opilane\\Source\\Repos\\KaardiManguProjekt\\wwwroot\\",
+      "BasePath": "_content/KaardiManguProject",
+      "RelativePath": "js/chat#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mch42cbm42",
+      "Integrity": "Kq3eRhZ8f7PQSeoMqyL+5UfjZFlUFxEPz1mVOe/m+Ac=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\chat.js"
+    },
+    {
+      "Identity": "C:\\Users\\opilane\\Source\\Repos\\KaardiManguProjekt\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",
+      "SourceId": "KaardiManguProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\opilane\\Source\\Repos\\KaardiManguProjekt\\wwwroot\\",
+      "BasePath": "_content/KaardiManguProject",
+      "RelativePath": "js/signalr/dist/browser/signalr#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m9ljcm03wp",
+      "Integrity": "lqnFamTnfe/VfKwPvgPbU+JiR36gH1hxRLvCqwQNak8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\signalr\\dist\\browser\\signalr.js"
     },
     {
       "Identity": "C:\\Users\\opilane\\Source\\Repos\\KaardiManguProjekt\\wwwroot\\js\\site.js",
@@ -1485,6 +1527,170 @@
       ]
     },
     {
+      "Route": "js/chat.js",
+      "AssetFile": "C:\\Users\\opilane\\Source\\Repos\\KaardiManguProjekt\\wwwroot\\js\\chat.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1222"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Kq3eRhZ8f7PQSeoMqyL+5UfjZFlUFxEPz1mVOe/m+Ac=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Mar 2026 07:00:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Kq3eRhZ8f7PQSeoMqyL+5UfjZFlUFxEPz1mVOe/m+Ac="
+        }
+      ]
+    },
+    {
+      "Route": "js/chat.mch42cbm42.js",
+      "AssetFile": "C:\\Users\\opilane\\Source\\Repos\\KaardiManguProjekt\\wwwroot\\js\\chat.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1222"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Kq3eRhZ8f7PQSeoMqyL+5UfjZFlUFxEPz1mVOe/m+Ac=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Mar 2026 07:00:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mch42cbm42"
+        },
+        {
+          "Name": "label",
+          "Value": "js/chat.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Kq3eRhZ8f7PQSeoMqyL+5UfjZFlUFxEPz1mVOe/m+Ac="
+        }
+      ]
+    },
+    {
+      "Route": "js/signalr/dist/browser/signalr.js",
+      "AssetFile": "C:\\Users\\opilane\\Source\\Repos\\KaardiManguProjekt\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "187832"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lqnFamTnfe/VfKwPvgPbU+JiR36gH1hxRLvCqwQNak8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Mar 2026 07:00:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lqnFamTnfe/VfKwPvgPbU+JiR36gH1hxRLvCqwQNak8="
+        }
+      ]
+    },
+    {
+      "Route": "js/signalr/dist/browser/signalr.m9ljcm03wp.js",
+      "AssetFile": "C:\\Users\\opilane\\Source\\Repos\\KaardiManguProjekt\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "187832"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lqnFamTnfe/VfKwPvgPbU+JiR36gH1hxRLvCqwQNak8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Mar 2026 07:00:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m9ljcm03wp"
+        },
+        {
+          "Name": "label",
+          "Value": "js/signalr/dist/browser/signalr.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lqnFamTnfe/VfKwPvgPbU+JiR36gH1hxRLvCqwQNak8="
+        }
+      ]
+    },
+    {
       "Route": "js/site.js",
       "AssetFile": "C:\\Users\\opilane\\Source\\Repos\\KaardiManguProjekt\\wwwroot\\js\\site.js",
       "Selectors": [],
@@ -1589,7 +1795,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Mar 2026 07:46:29 GMT"
+          "Value": "Fri, 27 Mar 2026 08:11:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1634,7 +1840,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Mar 2026 07:46:29 GMT"
+          "Value": "Fri, 27 Mar 2026 08:11:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1679,7 +1885,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Mar 2026 07:46:29 GMT"
+          "Value": "Fri, 27 Mar 2026 08:11:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1716,7 +1922,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Mar 2026 07:46:29 GMT"
+          "Value": "Fri, 27 Mar 2026 08:11:58 GMT"
         },
         {
           "Name": "Cache-Control",

@@ -36,11 +36,9 @@ namespace KaardiManguProject.ApplicationServices.Services
             if (result.Succeeded)
             {
                 var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                // HOMEWORK LOCATION?? D:
             }
             return user;
         }
-        // HOMEWORK LOCATION
         public async Task<ApplicationUser> Login(LoginDTO userDTO)
         {
             var user = await _userManager.FindByEmailAsync(userDTO.Email);

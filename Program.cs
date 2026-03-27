@@ -2,6 +2,7 @@ using KaardiManguProject.ApplicationServices.Services;
 using KaardiManguProject.Core.Domain;
 using KaardiManguProject.Core.ServiceInterface;
 using KaardiManguProject.Data;
+using KaardiManguProject.Views.SignalRChat;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -56,7 +57,7 @@ namespace KaardiManguProject
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
             app.MapRazorPages();
-            //app.MapHub<ChatHub>("/chatHub");
+            app.MapHub<ChatHub>("/chatHub");
             app.Run();
         }
     }

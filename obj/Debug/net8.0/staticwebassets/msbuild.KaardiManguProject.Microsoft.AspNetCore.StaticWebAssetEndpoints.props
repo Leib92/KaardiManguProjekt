@@ -24,6 +24,30 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Fri, 27 Mar 2026 06:47:19 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/KaardiManguProject/js/chat.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\chat.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Kq3eRhZ8f7PQSeoMqyL\u002B5UfjZFlUFxEPz1mVOe/m\u002BAc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1222"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022Kq3eRhZ8f7PQSeoMqyL\u002B5UfjZFlUFxEPz1mVOe/m\u002BAc=\u0022"},{"Name":"Last-Modified","Value":"Fri, 27 Mar 2026 07:00:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/KaardiManguProject/js/chat.mch42cbm42.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\chat.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"mch42cbm42"},{"Name":"integrity","Value":"sha256-Kq3eRhZ8f7PQSeoMqyL\u002B5UfjZFlUFxEPz1mVOe/m\u002BAc="},{"Name":"label","Value":"_content/KaardiManguProject/js/chat.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1222"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022Kq3eRhZ8f7PQSeoMqyL\u002B5UfjZFlUFxEPz1mVOe/m\u002BAc=\u0022"},{"Name":"Last-Modified","Value":"Fri, 27 Mar 2026 07:00:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/KaardiManguProject/js/signalr/dist/browser/signalr.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\signalr\dist\browser\signalr.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-lqnFamTnfe/VfKwPvgPbU\u002BJiR36gH1hxRLvCqwQNak8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"187832"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022lqnFamTnfe/VfKwPvgPbU\u002BJiR36gH1hxRLvCqwQNak8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 27 Mar 2026 07:00:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/KaardiManguProject/js/signalr/dist/browser/signalr.m9ljcm03wp.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\signalr\dist\browser\signalr.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"m9ljcm03wp"},{"Name":"integrity","Value":"sha256-lqnFamTnfe/VfKwPvgPbU\u002BJiR36gH1hxRLvCqwQNak8="},{"Name":"label","Value":"_content/KaardiManguProject/js/signalr/dist/browser/signalr.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"187832"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022lqnFamTnfe/VfKwPvgPbU\u002BJiR36gH1hxRLvCqwQNak8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 27 Mar 2026 07:00:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/KaardiManguProject/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -40,13 +64,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\KaardiManguProject.1ho9nnldmo.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"1ho9nnldmo"},{"Name":"integrity","Value":"sha256-JackOcCdLBxgI9\u002B\u002BeQrLzBQpx\u002Bqd3ohey3JhTjkqf58="},{"Name":"label","Value":"_content/KaardiManguProject/KaardiManguProject.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1285"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022JackOcCdLBxgI9\u002B\u002BeQrLzBQpx\u002Bqd3ohey3JhTjkqf58=\u0022"},{"Name":"Last-Modified","Value":"Fri, 27 Mar 2026 07:46:29 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1285"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022JackOcCdLBxgI9\u002B\u002BeQrLzBQpx\u002Bqd3ohey3JhTjkqf58=\u0022"},{"Name":"Last-Modified","Value":"Fri, 27 Mar 2026 08:11:58 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/KaardiManguProject/KaardiManguProject.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\KaardiManguProject.1ho9nnldmo.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-JackOcCdLBxgI9\u002B\u002BeQrLzBQpx\u002Bqd3ohey3JhTjkqf58="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1285"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022JackOcCdLBxgI9\u002B\u002BeQrLzBQpx\u002Bqd3ohey3JhTjkqf58=\u0022"},{"Name":"Last-Modified","Value":"Fri, 27 Mar 2026 07:46:29 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1285"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022JackOcCdLBxgI9\u002B\u002BeQrLzBQpx\u002Bqd3ohey3JhTjkqf58=\u0022"},{"Name":"Last-Modified","Value":"Fri, 27 Mar 2026 08:11:58 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/KaardiManguProject/lib/bootstrap/dist/css/bootstrap-grid.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap-grid.css'))</AssetFile>

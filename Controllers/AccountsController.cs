@@ -193,7 +193,7 @@ namespace KaardiManguProject.Controllers
                     var dto = new EmailDTO()
                         {
                             SendToThisAddress = model.Email,
-                            EmailSubject = "Email Confirmation",
+                            EmailSubject = "KaardiManguProject Confirmation",
                             EmailContent = "Please click on this Link to confirm your account - " + confirmationLink
                     };
                     _emailsServices.SendEmail(dto);

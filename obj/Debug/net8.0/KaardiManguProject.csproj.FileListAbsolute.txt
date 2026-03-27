@@ -191,3 +191,8 @@ C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\refint\KaardiM
 C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\KaardiManguProject.pdb
 C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\KaardiManguProject.genruntimeconfig.cache
 C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\ref\KaardiManguProject.dll
+C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
