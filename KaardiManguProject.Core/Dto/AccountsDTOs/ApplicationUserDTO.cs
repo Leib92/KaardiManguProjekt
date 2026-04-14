@@ -18,5 +18,9 @@ namespace KaardiManguProject.Core.Dto.AccountsDTOs
         public string AvatarName { get; set; }
         public int AvatarRating { get; set; }
         public string Opinion { get; set; }
+        public string MainColor { get; set; } = "#ff0000";
+        public string SecondaryColor { get; set; } = "#00ff00";
+        public string TextColor { get; set; } = "#0000ff";
+        public bool DarkMode { get; set; } = false; // Used to make the links white or black depending on the bool. 
     }
 }

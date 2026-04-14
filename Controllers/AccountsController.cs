@@ -184,6 +184,10 @@ namespace KaardiManguProject.Controllers
                     ProfileType = model.ProfileType,
                     AvatarName = model.DisplayName,
                     AvatarImageID = Guid.NewGuid().ToString(),
+                    MainColor = "#ff0000",
+                    SecondaryColor = "#00ff00",
+                    TextColor = "#0000ff",
+                    DarkMode = false,
                 };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
