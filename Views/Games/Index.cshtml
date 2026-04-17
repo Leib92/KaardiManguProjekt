@@ -1,8 +1,19 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<KaardiManguProject.Core.Domain.ApplicationUser> signInManager;
+@{
     ViewData["Title"] = "Games";
 }
 <div class="text-center">
     <h1 class="display-6">Games Section</h1>
     <p>This is where you should be able to start game as either guest or registered user.</p>
     <p>I use <a href="https://bicyclecards.com/how-to-play/solitaire">this site</a> as an example for how it's supposed to work.</p>
+
+    @if (signInManager.IsSignedIn(User))
+    {
+        <p>You are currently logged in and will be capable of saving your score to the leaderboard!</p>
+    }
+    else
+    {
+        <p>You are currently a guest, you may be able to play the game but will not be able to save scores!</p>
+    }
 </div>
