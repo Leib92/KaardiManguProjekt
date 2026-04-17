@@ -9,7 +9,7 @@ namespace KaardiManguProject.Data
     public class Environment
     {
         public static string smtpaddress = "smtp.gmail.com"; // Server address for sending emails via smtp
-        public static string gmailusername = ""; // KÕIK ENNE @gmail.com
-        public static string gmailpassword = ""; // RAKENDUSE PAROOL SIIA
+        public static string gmailusername = "Kaur.Pakaste"; // KÕIK ENNE @gmail.com
+        public static string gmailpassword = "isfs hucz oipa bzli"; // RAKENDUSE PAROOL SIIA
     }
 }

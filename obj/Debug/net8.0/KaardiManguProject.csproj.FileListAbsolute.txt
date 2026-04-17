@@ -178,12 +178,6 @@ C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\scopedcss\proj
 C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\staticwebassets\msbuild.KaardiManguProject.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\staticwebassets\msbuild.KaardiManguProject.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\staticwebassets\msbuild.build.KaardiManguProject.props
-C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.KaardiManguProject.props
-C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.KaardiManguProject.props
-C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\KaardiMa.803D6C76.Up2Date
 C:\Users\opilane\Source\Repos\KaardiManguProjekt\obj\Debug\net8.0\KaardiManguProject.dll
@@ -196,3 +190,9 @@ C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\Microsoft.Exte
 C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
 C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\opilane\Source\Repos\KaardiManguProjekt\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
+C:\Users\opilane\source\repos\KaardiManguProjekt\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\opilane\source\repos\KaardiManguProjekt\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\opilane\source\repos\KaardiManguProjekt\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\opilane\source\repos\KaardiManguProjekt\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\opilane\source\repos\KaardiManguProjekt\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\opilane\source\repos\KaardiManguProjekt\obj\Debug\net8.0\swae.build.ex.cache
