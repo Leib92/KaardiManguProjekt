@@ -18,5 +18,6 @@ namespace KaardiManguProject.Core.Dto.AccountsDTOs
         public string AvatarName { get; set; }
         public int AvatarRating { get; set; }
         public string Opinion { get; set; }
+        public bool IsAdmin { get; set; } = false;
     }
 }

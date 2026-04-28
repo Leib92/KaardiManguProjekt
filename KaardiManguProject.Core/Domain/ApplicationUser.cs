@@ -17,5 +17,6 @@ namespace KaardiManguProject.Core.Domain
         /* Ise mõeldud välja */
         public int? AvatarRating { get; set; } = 0;
         public string? Opinion {  get; set; }
+        public bool IsAdmin { get; set; } = false;
     }
 }
