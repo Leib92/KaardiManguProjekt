@@ -13,8 +13,32 @@
     <h1 class="display-6">Admin Control Panel</h1>
     <p>You are an admin! Here you can control the site!</p>
 </div>
+	<form method="get">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th scope="col">User</th>
+					<th scope="col">Tööriistad</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var user in Model)
+				{
+					<tr>
+						<td>@user.AvatarName</td>
+						<td>
+							<a asp-action="PunishUser" asp-controller="Admin" asp-route-id="@user.Id" class="btn btn-outline-primary">Punish</a>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</form>
 }
-<div class="text-center">
-    <h1 class="display-6">Admin Control Panel</h1>
-    <p>You appear to have gotten to the Admin Control Panel while not being an admin, you dont get to see the correct text!</p>
-</div>
+else
+{
+	<div class="text-center">
+		<h1 class="display-6">Admin Control Panel</h1>
+		<p>You appear to have gotten to the Admin Control Panel while not being an admin, you dont get to see the correct text!</p>
+	</div>
+}

@@ -5421,23 +5421,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kaur\\.nuget\\packages\\": {},
+    "C:\\Users\\opilane\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kaur\\Source\\Repos\\KaardiManguProjekt\\KaardiManguProject.csproj",
+      "projectUniqueName": "C:\\Users\\opilane\\source\\repos\\KaardiManguProjekt\\KaardiManguProject.csproj",
       "projectName": "KaardiManguProject",
-      "projectPath": "C:\\Users\\Kaur\\Source\\Repos\\KaardiManguProjekt\\KaardiManguProject.csproj",
-      "packagesPath": "C:\\Users\\Kaur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kaur\\Source\\Repos\\KaardiManguProjekt\\obj\\",
+      "projectPath": "C:\\Users\\opilane\\source\\repos\\KaardiManguProjekt\\KaardiManguProject.csproj",
+      "packagesPath": "C:\\Users\\opilane\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\opilane\\source\\repos\\KaardiManguProjekt\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Kaur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\opilane\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5446,6 +5446,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -5464,7 +5465,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -5520,7 +5521,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
