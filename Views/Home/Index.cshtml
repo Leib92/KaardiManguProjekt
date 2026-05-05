@@ -1,9 +1,17 @@
-﻿@{
+@{
     ViewData["Title"] = "Home Page";
 }
-
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<KaardiManguProject.Core.Domain.ApplicationUser> signInManager;
 <div class="text-center">
     <h1 class="display-4">Welcome to the Solitaire website!</h1>
     <p>Here you can super cool game of <a href="https://en.wikipedia.org/wiki/Solitaire">solitaire</a>.</p>
-    <p>You are currently a guest in this site, but register and leaderboard function will be added soon.</p>
+    @if (signInManager.IsSignedIn(User))
+    {
+        <p>Thank you for registering! Leaderboards will be added soon but you may participate in the Chatroom for now!</p>
+    }
+    else
+    {
+        <p>You are currently a guest in this site, leaderboard function will be added soon and you may register to participate in our chatroom!</p>
+    }
 </div>
