@@ -417,3 +417,4 @@ FodyWeavers.xsd
 *.msm
 *.msp
 /KaardiManguProject/Environment.cs
+/KaardiManguProject.Data/Environment.cs
