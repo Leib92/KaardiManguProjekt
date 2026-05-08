@@ -91,7 +91,7 @@ namespace KaardiManguProject.Controllers
         {
             return View();
         }
-        [HttpGet]
+        [HttpPost]
         [AllowAnonymous]
         public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
         {
