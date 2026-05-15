@@ -24,6 +24,7 @@ namespace KaardiManguProject.Controllers
             var vm = new ChatViewModel { };
 
             vm.DisplayName = user.AvatarName;
+            vm.AccountId = user.Id;
            
             return View("Index", vm);
         }
