@@ -4,6 +4,7 @@ using KaardiManguProject.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KaardiManguProject.Migrations
 {
     [DbContext(typeof(KaardiManguProjectTARpe24Context))]
-    partial class KaardiManguProjectTARpe24ContextModelSnapshot : ModelSnapshot
+    [Migration("20260515103713_ChatLog")]
+    partial class ChatLog
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -348,9 +351,8 @@ namespace KaardiManguProject.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("AccountID")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("AccountID")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("Date")
                         .HasColumnType("datetime2");

@@ -1,4 +1,5 @@
 ﻿using KaardiManguProject.Core.Domain;
+using KaardiManguProject.KaardiManguProject.Core.Domain;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -21,5 +22,6 @@ namespace KaardiManguProject.Data
         public DbSet<FileToDatabase> FilesToDatabase { get; set; }
         public DbSet<IdentityRole> IdentityRoles { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<ChatLog> ChatLog { get; set; }
     }
 }
