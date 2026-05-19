@@ -38,5 +38,6 @@ namespace KaardiManguProject.Views.SignalRChat
             await _context.SaveChangesAsync();
             await Clients.All.SendAsync("ReceiveMessage", user, message);
         }
+        
     }
 }

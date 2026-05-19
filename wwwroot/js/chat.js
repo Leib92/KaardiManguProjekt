@@ -29,3 +29,10 @@ document.getElementById("sendButton").addEventListener("click", function (event)
     });
     event.preventDefault();
 });
+
+window.onunload = function () {
+    invoke("LeaveMessage").catch(function (err) {
+        return console.error(err.toString());
+    });
+    event.preventDefault();
+};
