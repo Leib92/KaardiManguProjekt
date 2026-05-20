@@ -44,11 +44,11 @@ namespace KaardiManguProject.Controllers
 
             return View("Index", vm);
         }
-
+        [HttpPost]
         public async Task LeaveMessage()
         {
             var user = await _userManager.GetUserAsync(User);
-            string joinmessage = user + " left the chat";
+            string joinmessage = user.AvatarName + " left the chat";
 
             var messagelog = new ChatLog()
             {
