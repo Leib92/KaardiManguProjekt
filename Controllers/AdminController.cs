@@ -1,6 +1,7 @@
 ﻿using KaardiManguProject.Core.Domain;
 using KaardiManguProject.Core.ServiceInterface;
 using KaardiManguProject.Data;
+using KaardiManguProject.KaardiManguProject.Core.Domain;
 using KaardiManguProject.Models.Accounts;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -51,5 +52,16 @@ namespace KaardiManguProject.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
         }*/
+        public async Task<IActionResult> ChatlogView()
+        {
+            var result = _context.ChatLog.OrderBy(ab => ab.Date);
+            return View(result);
+        }
+        [HttpPost]
+        public async Task<IActionResult> ChatlogView(DateTime FromDate, DateTime ToDate)
+        {
+            var result = _context.ChatLog.OrderBy(ab => ab.Date).Where(ab => ab.Date >= FromDate && ab.Date <= ToDate.AddSeconds(1));
+            return View("ChatlogView",result);
+        }
     }
 }
