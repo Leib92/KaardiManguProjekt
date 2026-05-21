@@ -1,0 +1,63 @@
+﻿@{
+	ViewData["Title"] = "Admin";
+}
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<KaardiManguProject.Core.Domain.ApplicationUser> signInManager;
+@inject UserManager<KaardiManguProject.Core.Domain.ApplicationUser> userManager
+@{
+	var currentUser = await userManager.GetUserAsync(User);
+}
+@if (currentUser != null && currentUser.IsAdmin)
+{
+	<div class="text-center">		
+		<h1 class="display-6">Admin Chatlog View</h1>
+		<p>You are an admin! Here you can view the logs and punish users!</p>
+	</div>
+
+	<form method="post">
+		<div>From:</div>
+		<input class="datefield" data-val="true" data-val-required="Date is required"
+			   id="FromDate" name="FromDate" type="datetime" />
+		<div>To:</div>
+		<input class="datefield" data-val="true" data-val-required="Date is required"
+			   id="ToDate" name="ToDate" type="datetime" />
+		<input class="btn btn-outline-primary" type="submit" value="View Sorted">
+	</form>
+	<ul class="navbar-nav flex-grow-1">
+		<li class="nav-item">
+			<a class="btn btn-outline-primary" asp-area="" asp-controller="Admin" asp-action="ChatlogView">View All</a>
+		</li>
+	</ul>
+	<form method="get">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th scope="col">Date</th>
+					<th scope="col">UserId</th>
+					<th scope="col">Message</th>
+					<th scope="col">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var log in Model)
+				{
+					<tr>
+						<td>@log.Date</td>
+						<td>@log.AccountID</td>
+						<td>@log.MessageText</td>
+						<td>
+							<a asp-action="PunishUser" asp-controller="Admin" asp-route-id="@log.AccountID" class="btn btn-outline-primary">Punish</a>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</form>
+}
+else
+{
+	<div class="text-center">
+		<h1 class="display-6">Admin Control Panel</h1>
+		<p>You appear to have gotten to the Admin Control Panel while not being an admin, you dont get to see the correct text!</p>
+	</div>
+}

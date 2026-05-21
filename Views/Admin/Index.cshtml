@@ -13,6 +13,11 @@
     <h1 class="display-6">Admin Control Panel</h1>
     <p>You are an admin! Here you can control the site!</p>
 </div>
+	<ul class="navbar-nav flex-grow-1">
+		<li class="nav-item">
+			<a class="btn btn-outline-primary" asp-area="" asp-controller="Admin" asp-action="ChatlogView">View Chatlog</a>
+		</li>
+	</ul>
 	<form method="get">
 		<table class="table table-hover">
 			<thead>
@@ -34,6 +39,7 @@
 			</tbody>
 		</table>
 	</form>
+
 }
 else
 {
