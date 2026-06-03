@@ -23,5 +23,6 @@ namespace KaardiManguProject.Data
         public DbSet<IdentityRole> IdentityRoles { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<ChatLog> ChatLog { get; set; }
+        public DbSet<Filter> Filter { get; set; }
     }
 }

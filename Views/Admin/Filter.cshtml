@@ -1,0 +1,28 @@
+﻿@{
+	ViewData["Title"] = "Admin";
+}
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<KaardiManguProject.Core.Domain.ApplicationUser> signInManager;
+@inject UserManager<KaardiManguProject.Core.Domain.ApplicationUser> userManager
+@{
+	var currentUser = await userManager.GetUserAsync(User);
+}
+@if (currentUser != null && currentUser.IsAdmin)
+{
+	<div class="v1_2">
+
+	<form method="post">
+		<span class="v1_5">Chat censor filter data:</span><div class="v1_11">
+		<input class="v1_6">
+
+		</div><div class="v1_10"><input class="v1_8" type="submit" value="Update Filter"></div>
+	</form>
+	</div>
+}
+else
+{
+	<div class="text-center">
+		<h1 class="display-6">Admin Control Panel</h1>
+		<p>You appear to have gotten to the Admin Control Panel while not being an admin, you dont get to see the correct text!</p>
+	</div>
+}

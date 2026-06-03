@@ -63,5 +63,16 @@ namespace KaardiManguProject.Controllers
             var result = _context.ChatLog.OrderBy(ab => ab.Date).Where(ab => ab.Date >= FromDate && ab.Date <= ToDate.AddSeconds(1));
             return View("ChatlogView",result);
         }
+
+        public async Task<IActionResult> Filter()
+        {
+            var result = _context.Filter;
+            return View(result);
+        }
+        [HttpPost]
+        public async Task<IActionResult> FilterUpdate()
+        {
+            return View("Filter");
+        }
     }
 }
