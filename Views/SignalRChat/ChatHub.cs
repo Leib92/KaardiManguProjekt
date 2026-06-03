@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+using System.Text.RegularExpressions;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
@@ -44,14 +45,27 @@ namespace KaardiManguProject.Views.SignalRChat
 
         public async Task<string> FilterMessage(string message)
         {
-            string[] banned = new string[] { "Bomboclaat", "bomboclaat", "Sybau", "sybau", "fuck", "Fuck" };
-            for (int i = 0; i < banned.Length; i++)
+            var filter = await _context.Filter.FirstOrDefaultAsync();
+
+            if (filter == null)
+                return message;
+
+            var words = filter.FilterData
+                .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+
+            foreach (var word in words)
             {
-                string replacetext = new string('*', banned[i].Length);
-                message = message.Replace(banned[i], replacetext);
+                string replacement = new string('*', word.Length);
+
+                message = Regex.Replace(
+                    message,
+                    Regex.Escape(word),
+                    replacement,
+                    RegexOptions.IgnoreCase);
             }
+
             return message;
         }
-        
+
     }
 }
