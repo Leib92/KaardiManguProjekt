@@ -2,10 +2,12 @@
 using KaardiManguProject.Core.ServiceInterface;
 using KaardiManguProject.Data;
 using KaardiManguProject.KaardiManguProject.Core.Domain;
+using KaardiManguProject.Migrations;
 using KaardiManguProject.Models.Accounts;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace KaardiManguProject.Controllers
 {
@@ -66,13 +68,35 @@ namespace KaardiManguProject.Controllers
 
         public async Task<IActionResult> Filter()
         {
-            var result = _context.Filter;
-            return View(result);
+
+            var filter = await _context.Filter.FirstOrDefaultAsync();
+            if (filter == null)
+            {
+                filter = new Filter
+                {
+                    FilterID = Guid.Parse("ae7c0f13-1139-4859-a100-054f547b86ec"),
+                    FilterData = "bomboclaat,sybau,fuck"
+                };
+                _context.Filter.Add(filter);
+                await _context.SaveChangesAsync();
+            }
+            //var words = filter.FilterData;
+            return View(filter);
         }
         [HttpPost]
-        public async Task<IActionResult> FilterUpdate()
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> FilterUpdate(Filter filter)
         {
-            return View("Filter");
+            //Filter filter = await _context.Filter.FirstOrDefaultAsync();
+            filter.FilterID = Guid.Parse("ae7c0f13-1139-4859-a100-054f547b86ec");
+            /*if (update == null)
+            {
+                update = "";
+            }
+            filter.FilterData = update;*/
+            _context.Filter.Update(filter);
+            await _context.SaveChangesAsync();
+            return View("Filter",filter);
         }
     }
 }
