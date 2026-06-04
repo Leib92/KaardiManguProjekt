@@ -6,7 +6,7 @@ body {
 }
 .v1_2 {
   width: 100%;
-  height: 100%;
+  height: 1024px;
   background: rgba(69,0,0,1);
   opacity: 1;
   position: absolute;
@@ -466,3 +466,15 @@ body {
     opacity: 1;
     text-align: left;
 }
+
+customcss>*{
+    border: 2px solid black;
+    background-color: #c55050;
+    color:white;
+}
+
+customcss>tr, customcss>th, customcss>td {
+    border: 2px solid black;
+    background-color: #c55050;
+}
+
