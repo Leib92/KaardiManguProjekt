@@ -38,42 +38,48 @@
                 <div class="chatlog-panel">
                     <h3>Chat Logs</h3>
 
-                    <table class="admin-table">
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Message</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+
                             @foreach (var log in Model.ChatLogs)
                             {
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Message</th>
+                                </tr>
+                            </thead>
+                            <tbody>
                                 <tr>
                                     <td>@log.Date</td>
                                     <td>@log.MessageText</td>
                                 </tr>
+                            </tbody>
+                        </table>
+                        <br />
+                        <br />
                             }
-                        </tbody>
-                    </table>
+
                 </div>
 
                 <div class="userinfo-panel">
                     <h3>User Info</h3>
 
-                    <table class="admin-table">
-                        <thead>
-                            <tr>
-                                <th>UserId</th>
-                                <th>Name</th>
-                                <th>AvatarRating</th>
-                                <th>IsAdmin</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+
                             @foreach (var log in Model.ChatLogs)
                             {
-                                var user = Model.Users.FirstOrDefault(u => u.Id == log.AccountID);
+                        var user = Model.Users.FirstOrDefault(u => u.Id == log.AccountID);
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>UserId</th>
+                                    <th>Name</th>
+                                    <th>AvatarRating</th>
+                                    <th>IsAdmin</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
 
                                 <tr>
                                     <td>@user.Id</td>
@@ -84,9 +90,12 @@
                                         <a asp-action="PunishUser" asp-controller="Admin" asp-route-id="@log.AccountID">Punish</a>
                                     </td>
                                 </tr>
+                            </tbody>
+                        </table>
+                        <br />
+                        <br />
                             }
-                        </tbody>
-                    </table>
+
                 </div>
             </form>
             </div>
