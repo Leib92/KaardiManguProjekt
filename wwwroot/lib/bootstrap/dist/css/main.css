@@ -12,6 +12,7 @@ body {
   position: absolute;
   top: 150px;
   left: 0px;
+  color: white;
 }
 .v1_3 {
   width: 519px;
@@ -467,14 +468,49 @@ body {
     text-align: left;
 }
 
-customcss>*{
-    border: 2px solid black;
-    background-color: #c55050;
-    color:white;
+.admin-container form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 10px;
 }
 
-customcss>tr, customcss>th, customcss>td {
-    border: 2px solid black;
-    background-color: #c55050;
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: grey;
+    color: white;
+    border-radius: 15px;
 }
 
+    .admin-table th {
+        background-color: dimgrey;
+        padding: 10px;
+        border: 1px solid #999;
+    }
+
+    .admin-table td {
+        padding: 8px;
+        border: 1px solid #999;
+    }
+
+    .admin-table tr:nth-child(even) {
+        background-color: dimgrey;
+    }
+
+    .admin-table tr:hover {
+        background-color: darkgray;
+    }
+
+    .admin-table a {
+        color: mediumvioletred;
+    }
+    .admin-table a:hover {
+        color: red;
+    }
+
+    .admin-container div {
+        padding: 10px;
+        text-align: center;
+    }

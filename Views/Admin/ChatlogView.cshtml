@@ -7,9 +7,11 @@
 @{
 	var currentUser = await userManager.GetUserAsync(User);
 }
+@model KaardiManguProject.ViewModels.AdminChatlogViewModel;
+
 @if (currentUser != null && currentUser.IsAdmin)
 {
-	<div class="v1_2">
+    <div class="v1_2">
 	<div class="text-center">		
 		<h1 class="display-6">Admin Chatlog View</h1>
 		<p>You are an admin! Here you can view the logs and punish users!</p>
@@ -29,31 +31,68 @@
 			<a class="btn btn-outline-primary" asp-area="" asp-controller="Admin" asp-action="ChatlogView">View All</a>
 		</li>
 	</ul>
-	<form method="get">
-			<table class="customcss">
-			<thead>
-				<tr>
-					<th scope="col">Date</th>
-					<th scope="col">UserId</th>
-					<th scope="col">Message</th>
-					<th scope="col">Actions</th>
-				</tr>
-			</thead>
-			<tbody>
-				@foreach (var log in Model)
-				{
-					<tr>
-						<td>@log.Date</td>
-						<td>@log.AccountID</td>
-						<td>@log.MessageText</td>
-						<td>
-							<a asp-action="PunishUser" asp-controller="Admin" asp-route-id="@log.AccountID" class="btn btn-outline-primary">Punish</a>
-						</td>
-					</tr>
-				}
-			</tbody>
-		</table>
-	</form>
+
+
+            <div class="admin-container">
+            <form method="get">
+                <div class="chatlog-panel">
+                    <h3>Chat Logs</h3>
+
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var log in Model.ChatLogs)
+                            {
+                                <tr>
+                                    <td>@log.Date</td>
+                                    <td>@log.MessageText</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="userinfo-panel">
+                    <h3>User Info</h3>
+
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>UserId</th>
+                                <th>Name</th>
+                                <th>AvatarRating</th>
+                                <th>IsAdmin</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var log in Model.ChatLogs)
+                            {
+                                var user = Model.Users.FirstOrDefault(u => u.Id == log.AccountID);
+
+                                <tr>
+                                    <td>@user.Id</td>
+                                    <td>@user.AvatarName</td>
+                                    <td>@user.AvatarRating</td>
+                                    <td>@user.IsAdmin</td>
+                                    <td>
+                                        <a asp-action="PunishUser" asp-controller="Admin" asp-route-id="@log.AccountID">Punish</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+            </div>
+
+
+
 	</div>
 }
 else

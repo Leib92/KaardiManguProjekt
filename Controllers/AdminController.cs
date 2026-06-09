@@ -4,6 +4,7 @@ using KaardiManguProject.Data;
 using KaardiManguProject.KaardiManguProject.Core.Domain;
 using KaardiManguProject.Migrations;
 using KaardiManguProject.Models.Accounts;
+using KaardiManguProject.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
@@ -56,14 +57,22 @@ namespace KaardiManguProject.Controllers
         }*/
         public async Task<IActionResult> ChatlogView()
         {
-            var result = _context.ChatLog.OrderBy(ab => ab.Date);
-            return View(result);
+            AdminChatlogViewModel vm = new AdminChatlogViewModel();
+
+            vm.ChatLogs = await _context.ChatLog.OrderBy(ab => ab.Date).ToListAsync();
+            vm.Users = await _userManager.Users.ToListAsync();
+
+            return View(vm);
         }
         [HttpPost]
         public async Task<IActionResult> ChatlogView(DateTime FromDate, DateTime ToDate)
         {
-            var result = _context.ChatLog.OrderBy(ab => ab.Date).Where(ab => ab.Date >= FromDate && ab.Date <= ToDate.AddSeconds(1));
-            return View("ChatlogView",result);
+            AdminChatlogViewModel vm = new AdminChatlogViewModel();
+
+            vm.ChatLogs = await _context.ChatLog.OrderBy(ab => ab.Date).Where(ab => ab.Date >= FromDate && ab.Date <= ToDate.AddSeconds(1)).ToListAsync();
+            vm.Users = await _userManager.Users.ToListAsync();
+
+            return View("ChatlogView",vm);
         }
 
         public async Task<IActionResult> Filter()
