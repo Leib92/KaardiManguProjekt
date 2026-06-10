@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KaardiManguProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b751289abc166f2e8ea578fb89152cf3131225d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9cd514ccd14f13d7bcbf4856aebd5099138986ab")]
 [assembly: System.Reflection.AssemblyProductAttribute("KaardiManguProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KaardiManguProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
