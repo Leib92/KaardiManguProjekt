@@ -35,7 +35,7 @@ wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
-wwwroot\lib\bootstrap\dist\css\main.css
+wwwroot\lib\bootstrap\dist\css\v2_57.png
 wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
 wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
 wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
@@ -61,3 +61,4 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\lib\bootstrap\dist\css\main.css

@@ -513,3 +513,135 @@ body {
         padding: 10px;
         text-align: center;
     }
+
+.v2_44 {
+    width: 100%;
+    min-height: 1024px;
+    background: rgb(69, 0, 0);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.v2_46 {
+    width: 100%;
+    height: 16px;
+    background: rgb(220, 176, 0);
+    position: absolute;
+    top: 125px;
+    left: 0;
+}
+
+.v2_50 {
+    color: white;
+    position: absolute;
+    top: 238px;
+    left: 194px;
+    font-family: "Inder", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.v2_55 {
+    color: white;
+    position: absolute;
+    top: 605px;
+    left: 194px;
+    font-family: "Inder", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.v2_52 {
+    width: calc(100% - 220px);
+    max-width: 1200px;
+    height: 240px;
+    background-color: darkgreen;
+    position: absolute;
+    top: 292px;
+    left: 110px;
+    border: 8px solid rgb(143, 143, 143);
+    border-radius: 50px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 50px;
+    text-align: right;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.v2_52:hover {
+    width: calc(100% - 220px);
+    max-width: 1200px;
+    height: 240px;
+    background-color: green;
+    position: absolute;
+    top: 292px;
+    left: 110px;
+    border: 8px solid rgb(143, 143, 143);
+    border-radius: 50px;
+    box-sizing: border-box;
+    color: lightgreen;
+    font-size: 50px;
+    text-align: right;
+}
+
+.v2_57 {
+    width: calc(100% - 220px);
+    max-width: 1200px;
+    height: 240px;
+    background-color: dimgrey;
+    position: absolute;
+    top: 659px;
+    left: 110px;
+    border: 8px solid rgb(143, 143, 143);
+    border-radius: 50px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 50px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+    .v2_57:hover {
+        width: calc(100% - 220px);
+        max-width: 1200px;
+        height: 240px;
+        background-color: grey;
+        position: absolute;
+        top: 659px;
+        left: 110px;
+        border: 8px solid rgb(143, 143, 143);
+        border-radius: 50px;
+        box-sizing: border-box;
+        color: lightgrey;
+        font-size: 50px;
+        text-align: right;
+    }
+
+.v1_11,
+.v1_12 {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.v1_11 {
+    position: absolute;
+    top: 90px;
+    left: 40px;
+    background-color: gold;
+    color: black;
+}
+
+.v1_12 {
+    position: absolute;
+    top: 90px;
+    left: 40px;
+    background-color: gray;
+    color: white;
+}

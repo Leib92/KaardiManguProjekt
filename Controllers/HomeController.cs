@@ -17,6 +17,10 @@ namespace KaardiManguProject.Controllers
         {
             return View();
         }
+        public IActionResult TestLanding()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {
